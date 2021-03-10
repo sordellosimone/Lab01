@@ -6,7 +6,7 @@ import java.util.*;
 public class Parole {
 	
 	TreeMap<String,String> listaparole;
-	
+	LinkedList<String> listap= new LinkedList<String>();
 	public Parole() {
 		listaparole= new TreeMap<String,String>();
 	}
@@ -14,6 +14,7 @@ public class Parole {
 	public void addParola(String p) {
     
 		listaparole.put(p, p);
+		listap.add(p);
 
 	}
 	
@@ -31,5 +32,15 @@ public class Parole {
 		
 			
 	}
+	
+	public void cancella() {
+		String pp= listap.getLast();
+			listaparole.remove(pp);
+		}
+		
+		
+	
+		
+
 
 }
